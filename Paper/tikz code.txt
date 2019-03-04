@@ -1,0 +1,32 @@
+\tikzstyle{data} = [diamond, minimum width=1cm, minimum height=1cm,text centered, draw=black, fill=blue!30]
+\tikzstyle{bClass} = [rectangle, minimum width=1cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{mClass} = [rectangle, minimum width=1cm, minimum height=1cm,text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{tikzpicture}[node distance=1.5cm]
+
+\node (Btrain1) [data] 									{Btrain};
+\node (Mtest1)  [data, rightof=Btrain1]					{Mtest};
+\node (Btrain2) [data, rightof=Mtrain] 					{Btrain};
+\node (Mtrain)  [data, rightof=Btrain2]					{Mtrain};
+
+\node (bClass1) [bClass, belowof=Btrain1, xshift=0.5cm] {Base Class.};
+\node (bClass2) [bClass, belowof=Btrain2, xshift=0.5cm] {Base Class.};
+
+\node (mClass1) [mClass, belowof=bClass1]				{non-meta Ensemble}
+\node (mClass2) [mClass, belowof=bClass2]				{meta Ensemble}
+
+\node (end)		[data, belowof=mClass1, xshift=1cm]		{Predictions}
+
+\draw [arrow] (Btrain1) -- (bClass1);
+\draw [arrow] (Mtest1) -- (bClass1);
+\draw [arrow] (Btrain2) -- (bClass2);
+\draw [arrow] (Mtrain) -- (bClass2);
+
+\draw [arrow] (bClass1) -- (mClass1);
+\draw [arrow] (bClass2) -- (mClass2);
+\draw [arrow] (bClass1) -- (mClass2);
+
+\draw [arrow] (mClass1) -- (end);
+\draw [arrow] (mClass2) -- (end);
+
+\end{tikzpicture}

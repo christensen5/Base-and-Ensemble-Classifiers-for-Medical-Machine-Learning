@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.zip",
+				"*.gz"
+			],
+			"path": "/Users/Alex/Dropbox/Documents/University/URSS/Paper/project"
+		}
+	]
+}

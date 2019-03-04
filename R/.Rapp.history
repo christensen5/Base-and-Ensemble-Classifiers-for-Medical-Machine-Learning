@@ -1,0 +1,56 @@
+demo()
+library()
+search()
+y <-matrix(1:20,nrow=5,ncol=4)
+y
+c(1)
+c(26)
+cells<-c(1,26,24,68)
+c
+cells
+rnames <-c("R1","R2")
+cnames <-c("C1","C2")
+mymatrix <- matrix(cells, nrow=2, ncol=2, byrow=TRUE, dimnames=list(rnames, cnames))
+mymatrix
+y[,4]
+ls()
+ls
+pwd
+wd
+wd()
+clear
+clear()
+data.train <-read.table("/Users/Alex/Dropbox/Documents/University/URSS/R/testing data", header=TRUE, sep=",", row.names="id")
+data.train <-read.table("/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/poker-hand-training-true.data", header=TRUE, sep=",", row.names="id")
+?read.table
+data.train <-read.table("/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/poker-hand-training-true.data", header=TRUE, sep=",")
+data.train
+data.test <-read.table("/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/poker-hand-testing.data", header=TRUE, sep=",")
+data.test
+data.train <-read.table("/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/poker-hand-training.data", header=TRUE, sep=",")
+data.test <-read.table("/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/poker-hand-testing.data", header=TRUE, sep=",")
+load(".RData")
+setwd("~/Dropbox/Documents/University/URSS/R")#
+source("functions/base classifiers/ClassifierModels.R")#
+source("functions/base classifiers/CrossValidation.R")#
+source("functions/ensembles/AverageEnsemble.R")#
+source("functions/ensembles/MajorityVote.R")#
+source("functions/ensembles/RankAvgSumEnsemble.R")#
+source("functions/ensembles/Stacking.RandFor.R")#
+source("functions/ensembles/Stacking.SparseLogReg.R")#
+source("functions/ensembles/Stacking.LogReg.R")#
+source("functions/ensembles/WeightedAverageEnsemble.R")#
+source("functions/ensembles/EnsembleModels.R")#
+source("functions/tools/PlotRocCurve.R")#
+source("functions/tools/SetupIbcc.R")#
+#
+library("CORElearn")#
+library("caret")
+data.Btrain.spect <- read.table("datasets/spect/spect-data-Btrain.data", sep=",")#
+data.Mtrain.spect <- read.table("datasets/spect/spect-data-Mtrain.data", sep=",")#
+data.Mtest.spect <- read.table("datasets/spect/spect-data-Mtest.data", sep=",")#
+tv.Btrain.spect <- scan("datasets/spect/spect-tv-Btrain.data", what=integer())#
+tv.Mtrain.spect <- scan("datasets/spect/spect-tv-Mtrain.data", what=integer())#
+tv.Mtest.spect <- scan("datasets/spect/spect-tv-Mtest.data", what=integer())
+EnsembleModels(data.Btrain.spect, data.Mtrain.spect, data.Mtest.spect, tv.Btrain.spect, tv.Mtrain.spect, tv.Mtest.spect, output="AUC")
+EnsembleModels(data.Btrain.spect, data.Mtrain.spect, data.Mtest.spect, tv.Btrain.spect, tv.Mtrain.spect, tv.Mtest.spect, output="AUC")

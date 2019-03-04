@@ -1,0 +1,244 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.tex",
+			"settings":
+			{
+				"buffer_size": 22294,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 333.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Alex/Dropbox/Documents/University/URSS/Paper/project/main.tex",
+		"/Users/Alex/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
+		"/Users/Alex/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Alex/Library/Application Support/Sublime Text 2/Packages/User/LaTeXing.sublime-settings",
+		"/Users/Alex/Dropbox/Documents/University/URSS/Paper/project/project.sublime-project",
+		"/Users/Alex/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/README.markdown",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/datasets/haberman-surv/haberman-tv-Mtest.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/vertebral.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/stHeart.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/spectF.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/spect.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/mammographic.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/ilpd.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/heart-hungary.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/results/EnsembleModels/haberman-surv.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/datasets/bc-wisc-original/bcWiscOrig-data-Mtest.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/datasets/bc-wisc-diag/test/bcWiscDiag-data-Btrain.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/datasets/bc-wisc-diag/bcWiscDiag-data-Btrain.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/datasets/haberman-surv/RAW/haberman.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/datasets/bc-wisc-original/(PRUNED)bc-wisc-orig.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/ClassifierModels.R",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/*REPL* [r]",
+		"/Users/Alex/Library/Application Support/Sublime Text 2/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/temp1.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/HALFTARGET2.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/(CRef10%)spambase-targetvalues.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/HALFTEST2.data",
+		"/Users/Alex/Dropbox/Documents/University/URSS/R/testing data/(CRef10%)spambase-data.data",
+		"/Users/Alex/Desktop/f3-master/utils.c",
+		"/Users/Alex/Development/android-sdk/sources/android-21/com/android/server/updates/CarrierProvisioningUrlsInstallReceiver.java"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"NA",
+			"?",
+			"0",
+			"0,",
+			",0,",
+			"0",
+			",2",
+			"Male",
+			"Female",
+			"0",
+			"1",
+			"name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"1",
+			"0",
+			"F",
+			"T",
+			"-80000"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.tex",
+					"settings":
+					{
+						"buffer_size": 22294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8848,
+								8848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3215.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 156.0
+	},
+	"output.latex_log":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"main.tex"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 137.0,
+	"status_bar_visible": true
+}

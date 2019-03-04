@@ -1,0 +1,377 @@
+\documentclass{bioinfo}
+\copyrightyear{2015} \pubyear{2015}
+
+\usepackage{url}
+\usepackage{rotating}
+\usepackage{csvsimple}
+\usepackage{color}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\access{Advance Access Publication Date: Day Month Year}
+\appnotes{Manuscript Category}
+
+\begin{document}
+\firstpage{1}
+
+\subtitle{\textcolor{red}{Subject Section??}}
+
+\title[Is Ensembling Always Preferable for Medical Data?]{Does Ensembling Classifiers Always Confer a Quantifiable Advantage over Selecting a Single Best Classifier for Medical Diagnosis or Prognosis?}
+
+\author[Christensen, A. K. \textit{et~al}.]{Alexander Kier Christensen\,$^{\text{\sfb 1,}*}$, Richard S. Savage.\,$^{\text{\sfb 2}}$}
+
+\address{$^{\text{\sf 1}}$Systems Biology Centre, University of Warwick, Coventry, CV4 7ES, UK.
+\newline
+$^{\text{\sf 2}}$Systems Biology Centre, University of Warwick \& Warwick Medical School, Coventry, CV4 7ES, UK.}
+
+\corresp{$^\ast$To whom correspondence should be addressed. \textcolor{red}{IS THIS ME?}}
+
+\history{Received on XXXXX; revised on XXXXX; accepted on XXXXX}
+
+\editor{Associate Editor: XXXXXXX}
+
+\abstract{\textbf{Motivation:} Rapid expansion of medical data available to the healthcare industry is driving demand for more accurate, precise and reliable tools for exploiting these data. Real-world experience suggests that ensemble methods for machine learning might be able to meet all three critera at a low cost, potentially saving both scarce funds and patients' lives. We attempt to go beyond the existing literature on individual machine learning algorithms to discover the effectiveness combining their predictions, and to explore the suitability of such so-called 'ensemble methods' to personalised diagnostic and prognostic medicine.\\
+\\
+\textbf{Results:} Ensembling for model uncertainty provides little or no advantage over selection of a single best-performing classifier on almost every dataset we examine, suggesting that successful ensembling depends more on feature learning and on selecting the best base classifiers for a given task.\\
+\\
+The 'data cost' of ensemble methods which apply a meta-learning stage to the predictions of the base classifiers often outweighs the performance gain from the more intelligent 'learned' combination of the base predictions, particularly if a dataset is small, which is commonly the case with medical datasets. In these cases, ensemble methods involving unsupervised learning and/or larger training sets for the base classifiers may be preferable.\\
+\\
+Simpler methods such as simple or rank averaging of base predictions often perform decently and tend to exhibit far less variation in predictive ability than more complex and computationally costly methods such as stacking or Bayesian combiners. These are very desirable qualities in a field such as diagnostic medicine, where the use of an inconsistent classifier may mean lives lost.\\
+\\
+\textbf{Availability:} R implementations of our own base and ensemble classifiers are available at \url{https://github.com/christensen5/Classifiers-for-Medical-Machine-Learning.git} \textcolor{red}{HAVE NOT YET ADDED ANYTHING TO THIS REPOSITORY}\\
+A Python implementation of Edwin Simpson's IBCC classifier is available at \url{https://github.com/CitizenScienceInAstronomyWorkshop/pyIBCC}
+\\
+\textbf{Contact:} \href{R.S.Savage@warwick.ac.uk}{R.S.Savage@warwick.ac.uk}\\
+\textbf{Supplementary information:} Supplementary data are available at \textit{Bioinformatics}
+online.}
+
+\maketitle
+
+\section{Introduction}
+
+As medicine continues to evolve into a data-rich discipline, there is an increasing need for machine learning methods which can take full advantage of the rapidly-growing data that doctors are amassing on their patients and the illnesses which afflict them. In non-medical applications of machine learning, such as the well-known Netflix competition, it is often the case that incremental gains in performance are not worth the extra computational cost, but the nascent fields of personalised diagnostic and prognostic medicine are particularly well-placed to benefit from even minor improvements in classifier performance, since early identification of a disease can save both treatment costs and patients' lives. Ensemble methods have been seen to offer noticeable performance gains over individual classification algorithms in a multitude of real-world scenarios, and it is therefore important to determine more precisely if and when these gains can be exploited by the medical community.
+
+There exists already a significant amount of literature studying the variety and effectiveness of individual machine learning classifiers (see \cite{classifiercomparison} for one exhaustive example). In practise, real-world results suggest that it is usually possible to obtain a significant boost in predictive ability by combining the predictions from a number of different learners. Combination methods (which we shall refer to as ensemble methods or ensemble classifiers) exist in many forms, from simple averaging of predictions or majority voting, to more complex meta-learning approaches. Our task is to obtain data on the performance of such ensemble classifiers on a variety of medical datasets, in order to evaluate whether or not ensembling does in general offer a genuine performance increase.
+
+\begin{methods}
+\vspace{-0.8cm}
+\section{Methods}
+
+\subsection{Approach}
+
+We aim to assess across a variety of datasets the effectiveness of different combination strategies compared to each other and to the individual classification algorithms that they are combining. We choose to focus on datasets of a medical nature in order to limit the otherwise prohibitively vast pool of available data, and in order to obtain results specifically relevant to the field of diagnostic and prognostic medical machine learning, as discussed above.
+
+We have assembled a collection of datasets from the UCI machine learning repository, selected for meeting the following conditions:
+
+\begin{itemize}
+\item Data of a medical nature
+\item Binary classification variable
+\item At least 250 instances without missing data
+\end{itemize}
+
+\noindent
+We use a collection of 11 base classifiers (drawn from a variety of existing R packages) and 7 ensemble classifiers (both existing and of our own implementation) to train and obtain predictions. The predictions of each ensemble classifier on each dataset are evaluated by the AUC metric to determine their effectiveness compared to each other and to the best performing base classifier on that dataset.
+
+All of the classifiers with the exception of the Independent Bayesian Classifier Combination (IBCC) ensemble are run in R. IBCC is run in Python using the implementation given in \cite{Simpson13}. In order to avoid bias, predictions are created independently before being passed to any ensemble classifier, and all were given the same set of predictions for each data set, whether via R or via Python.
+
+
+\subsection{Datasets}
+
+We describe the datasets used in our comparison:
+
+\begin{enumerate}
+    \item \textbf{Breast Cancer Wisconsin (Original)} (1991): classification of tumours into 'benign' or 'malignant'. Courtesy of Dr. William H Wolberg, Universiy of Wisconsin Hospitals, Madison.
+    \item \textbf{Breast Cancer Wisconsin (Diagnostic)} (1994): classification of tumours into 'benign' or 'malignant'. Courtesy of Dr. William H. Wolberg, University of Wisconsin, Clinical Sciences Center, Madison.
+    \item \textbf{Haberman's Survival Dataset} (1999): classification of patients undergoing breast cancer surgery into 'deceased within 5 years' or 'survived at least 5 years'. Courtesy of University of Chicago's Billings Hospital \& Tjen-Sien Lim, Department of Statistics, University of Wisconsin, Madison.
+    \item \textbf{Heart Disease Dataset (Hungarian)} (1988): classification of patients into 'presence' or 'absence' of heart disease. Courtesy of Andras Janosi, M.D., Hungarian Institute of Cardiology, Budapest \& David W. Aha, Institute of Information and Computer Science, UCI.
+    \item \textbf{Indian Liver Patient Database} (2012): classification of patients into 'liver patient' or 'non liver patient'. Courtesy of B. V. Ramana \& Prof N. B. Venkateswarlu, Aditya Institute of Technology and Management \& Prof M. S. Prasad Babu, Andhra University College of Engineering.
+    \item \textbf{Mammographic Mass Dataset} (2007): classification of mammographic masses into 'benign' or 'malignant'. Courtesy of Matthias Elter, Fraunhofer Institute for Integrated Circuits, Erlangen, Germany \& Dr Rudiger Schulz-Wendtland, Institute of Radiology, University Erlangen-Nuremberg, Germany.
+    \item \textbf{Single Proton Emission Computed Tomography (SPECT) Heart-imaging Dataset} (2001): classification of SPECT heart images into 'normal' or 'abnormal'. Courtesy of Krzysztof J. Cios \& Lukasz A. Kurgan, University of Colorado, Denver \& Lucy S. Goodenday, Medical College of Ohio, Ohio.
+    \item \textbf{SPECTF Heart-imaging Dataset} (2001): classification of SPECTF heart images into 'normal' or 'abnormal'. Courtesy of Krzysztof J. Cios \& Lukasz A. Kurgan, University of Colorado, Denver \& Lucy S. Goodenday, Medical College of Ohio, Ohio.
+    \item \textbf{Statlog (Heart) Dataset} (date unknown): classification of patients into 'presence' or 'absence' of heart disease. Source unknown.
+    \item \textbf{Vertebral Column Dataset} (2011): classification of orthopaedic patients into 'normal' or 'abnormal'. Courtesy of Guilherme de Alencar Barreto \& Ajalmar da Rocha Neto, Department of Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil \& Dr. Henrique da Mota Filho, Hospital Monte Klinikum, Fortaleza, Brazil.
+\end{enumerate}
+
+\begin{table}[b]
+\centering
+\begin{tabular*}{8cm} {@{}c @{\extracolsep{\fill}} ccc@{}}
+datasets        & \#instances  &\#variables & Majority\%\\
+\midrule
+bc-wisc-original&       683    &   9        &   52.2\\ 
+bc-wisc-diag    &       569    &   30       &   62.7\\ 
+haberman-survival&      306    &   3        &   73.5\\
+heart-hungary   &       261    &   10       &   62.5\\
+ilpd-indian-liver&      579    &   10       &   71.5\\
+mammographic    &       830    &   4        &   51.4\\
+spect           &       267    &   22       &   79.4\\
+spectF          &       267    &   44       &   79.4\\
+st-heart        &       270    &   13       &   55.6\\
+vertebral-col   &       310    &   6        &   67.7\\
+\botrule
+\end{tabular*}
+\caption{Our collection of 10 datasets from the UCI repository. Columns represent the number of instances, number of variables and the percentage of the majority class for each of the datasets after missing data is removed. Further detail on each dataset can be found in the list following the table.}
+\label{table:datasets}
+\end{table}
+
+\subsection{Data Conversion \& Processing}
+
+Missing data have been removed from the datasets, either by removing only the single instance with the missing data point or by removing an entire variable in the few cases where data for a specific variable is missing for all but a very small number of instances.
+
+In the cases where non-numeric values are given (e.g. M/F to represent gender) a simple numeric conversion is applied: if a variable $x$ can attain (discrete) non-numeric values $\{a_{1}, a_{2}, ..., a_{n}\}$ then the value $a_{i}$ is converted to the number $i \in \{1,...,n\}$.
+
+Before being passed to the k-NN base classifier, each variable is processed to have zero mean and standard deviation one. Since k-NN is a distance-based classifier, variables will be weighted according to the size of the range in their numerical values, rather than according to any genuine underlying medical importance. We therefore apply the pre-processing to 'smooth out' this weighting more uniformly. We apply the same normalisation before passing data to the Neural Network base classifier, following best practise for this kind of classifier\cite{stackexchange-neuralnet}. We do not use further pre-processing, data transformation or feature selection.
+
+
+\subsection{Base Classifiers}
+
+We use the following Base Classifiers, implemented in R, to obtain predictions on which to train and test ensemble methods.
+
+\begin{enumerate}
+
+    \item \textbf{Sparse Logicstic Regression}, with the function cv.glmnet in the \textit{glmnet} package. We run with the flags \textit{maxit=1e5, alpha=1, family="binomial"}.
+    \item \textbf{Random Forest}, with the function randomForest in the \textit{randomForest} package. We run with the flags \textit{importance=TRUE, ntree=1500}.
+    \item \textbf{Generalised Boosting Model}, with the function gbm in the \textit{gbm} package. Flags \textit{distribution="bernoulli", ntrees=3000, interaction.depth=4, cv.folds=3, n.cores=2, n.minobsinnode < 10}.
+    \item \textbf{Gaussian Process}, with the function gausspr in the \textit{kernlab} package. We use set.seed to obtain consistent results in the interests of obtaining results that reflect the classification ability of the ensembling methods, not of the underlying base classifiers. Flags \textit{kernel="rbfdot"}.
+    \item \textbf{Support Vector Machine}, with the function ksvm in the \textit{kernlab} package. Flags \textit{kernel="rbfdot", prob.model=TRUE, kpar=list(sigma=0.05), C=5, cross=3}.
+    \item \textbf{Neural Network}, with the function neuralnet in the \textit{neuralnet} package. Flags \textit{hidden=1, threshold=0.01, linear.output=FALSE}.
+    \item \textbf{Decision Tree}, with the function C5.0 in the \textit{C50} package. Flags \textit{trials=1, rules=FALSE}.
+    \item \textbf{Rule-Based Method}, with the functions C5.0 in the \textit{C50} package. Flags \textit{trials=1, rules=TRUE}.
+    \item \textbf{k-Nearest Neighbour}, with the function knn3 in the \textit{caret} package. Flags \textit{k=40}.
+    \item \textbf{Naive Bayes}, with the function NaiveBayes in the \textit{klaR} package.
+    \item \textbf{Linear Discriminant Analysis}, with the function lda in the  \textit{MASS} package. 
+\end{enumerate}
+
+
+\subsection{Ensembling Process}
+\label{ensemblingprocess}
+
+Each dataset is partitioned randomly into three subsets:
+\begin{enumerate}
+\item Btrain (base classifier training set, 50\% of data instances)
+\item Mtrain (ensemble classifier training set, 25\% of data instances)
+\item Mtest (ensemble classifier testing set, 25\% of data instances)
+\end{enumerate}
+
+\noindent
+The ensemble predictions are obtained through the following procedures:
+
+\vspace{1cm}
+\noindent
+\textbf{Ensemblers with no meta-learning stage:}
+
+First, the base classifiers are trained on the combined set Btrain $\cup$ Mtrain, and predictions for Mtest are obtained. These predictions are passed to the ensemble classifier, to combine into a final set of predictions.
+
+\noindent
+\textbf{Ensemblers with a meta-learning stage:}
+
+First, the base classifiers are trained on the set Btrain, and separate predictions for Mtrain and Mtest are computed. The predictions for Mtrain are passed to the ensemble classifier to train the meta-learner, which then is given the predictions for Mtest in order to ensemble them into a final set of predictions.
+
+\subsection{Ensemble Classifiers}
+
+To ensemble the base classifier predictions, we use the following Ensemble Classifiers, developed by ourselves and implemented in R (with the aforementioned exception of IBCC, for which the Python implementation in \cite{Simpson13} is used).
+
+\begin{enumerate}
+    \item \textbf{Average}, simple average of the probabilistic base classifier predictions for each instance. No meta-learning stage is needed by this method.
+    \item \textbf{Weighted Average}, as with Average, but with a meta-learning stage in which each contributing base classifier has its prediction weighted according to its AUC score when classifying Mtrain.
+    \item \textbf{Majority Vote}, converts probabilistic base classifier predictions to binary predictions by rounding to nearest integer. Then conducts a 'vote' of the binarised predictions for each instance by summing them all and dividing by the number of instances to obtain a prediction between 0 and 1. No meta-learning stage.
+    \item \textbf{Rank Average}, ranks the predictions for each base classifier separately, then normalises these to obtain uniformly spaced values between 0 and 1, before computing a simple average of the ranks for each instance. No meta-learning stage.
+    \item \textbf{Stacking w/ Logistic Regression} uses glm, a logistic regression algorithm from the \texttt{glmnet} package, as a meta-classifier, llearning to ensemble the base classifier predictions for Mtrain, and returning ensembled predictions for Mtest. Flags \texttt{family="binomial"}.
+    \item \textbf{Stacking w/ Sparse Logistic Regression} uses glmnet, a logistic regression algorithm from the \texttt{glmnet} package, as a meta-classifier, learning to ensemble the base classifier predictions for Mtrain, and returning ensembled predictions for Mtest. Flags \texttt{family="binomial", maxit=1e5, alpha=1}
+    \item \textbf{Stacking w/ Random Forest} uses randomForest, a logistic regression algorithm from the \texttt{randomForest} package, as a meta-classifier, learning to ensemble the base classifier predictions for Mtrain, and returning ensembled predictions for Mtest. Flags \texttt{importance=TRUE, ntree=500}
+    \item \textbf{IBCC} (supervised mode), "Bayesian classifier combination, using the computationally efficient framework of variational Bayesian inference."\cite{Simpson13}. In supervised mode, IBCC acts as a meta-classifier, learning to ensemble the base classifier predictions.
+    \item \textbf{IBCC} (unsupervised mode). In unsupervised mode, IBCC performs unsupervised learning on the predictions obtained by training the base classifiers on the combined set Btrain $\cup$ Mtrain, thereby learning to ensemble base classifier predictions.
+\end{enumerate}
+
+\subsection{Comparison Metric}
+
+The performance of the classifiers is evaluated using the AUC metric, implemented in R using the roc function from the \texttt{pROC} package. For each classifier we use this function to obtain the AUC and a 95\% confidence interval. Tables including all of these data are included at the end of the document, in Tables \ref{fig:04} \& \ref{fig:05}.
+
+\end{methods}
+
+
+
+\section{Results \& Discussion}
+\label{results&discussion}
+
+In our experimental analysis we evaluate 9 ensemble methods, combining the predictions of 11 base classifiers over 10 datasets. We find that one of our base classifiers (NaiveBayes) strictly requires non-zero variances for all variables, and therefore will return errors when analysing the spect (but not spectF) dataset. We therefore omit the NaiveBayes base classifier when obtaining predictions for the spect dataset.
+
+\noindent
+Figure \ref{fig:01} displays the accuracies of each base classifier on each dataset. We include this for two principal reasons; firstly to demonstrate that the base classifiers are reasonably effective on their own, and therefore our ensembles are not "polluted" by including routinely impotent base predictions, and secondly to demonstrate that there is nonetheless a significant range in performance across datasets and classification algorithms. As the famous "No Free Lunch" Theorems would lead us to expect, we do not observe that any particular base classifier performs best on every dataset (or even a significant majority of them), but there are naturally some which tend to perform well by comparison to the rest.
+
+\noindent
+Figure \ref{fig:02} displays the accuracies of each ensemble classifier on each dataset. It was to be expected (once again in accordance with the "No Free Lunch" principle) that no individual ensemble method would prove consistently superior to the others. Our aim, therefore, is rather to determine whether or not it is usually possible to obtain an improvement in accuracy over the base classifiers by implementing \emph{some kind} of ensembling (i.e. is there usually at least one ensemble classifier which outperforms the best base classifier?). Conventional wisdom and the results from many real-world applications of machine learning (in particular competitions such as the Netflix Prize\cite{netflixprize} and Kaggle competitions\cite{kagglecompetitions}) suggest that a noticeable improvement is usually possible using even relatively unsophisticated ensembling techniques.
+
+We are therefore surprised to note that our results suggest that the best base classifier surpasses the accuracy of every ensemble classifier on 5 of our 10 datasets, and equals the accuracy of the best ensemble classifier on a further 2 datasets. Stacking with some form of logistic regression as the meta-learner is the only ensembling approach that manages to outperform the best base classifier on any of the datasets. This suggests that perhaps ensembling for model uncertainty as we have done here is less important than selecting the correct base classifier for a given task (as stacking is broadly attempting to do).
+
+\noindent
+We observe also a few general trends:
+
+\begin{enumerate}
+\item Average and Stack SLR are the stand-out best performers amongst the ensemble methods, with Rank Average also showing strong results.
+\item Average performs in the top 3 ensemble classifiers on 8 out of 10 datasets (although it never outperforms the best base classifier) and does not perform catastrophically on any of the datasets (unlike some of the more sophisticated ensemble methods), displaying a respectable level of consistency. These observations are also true to a slightly lesser extent for the similar Rank Average ensemble.
+\item Stacking with sparse logistic regression (as in Stack SLR) significantly outperforms stacking with logistic regression (as in Stack LR) on every dataset except st-heart. It seems that there is some aspect of these kinds of dataset which Stack SLR is generally better able to capture than Stack LR.
+\item Unsupervised IBCC significantly outperforms Supervised IBCC on 7 of our 10 datasets, and on the 2 datasets where Supervised IBCC wins, it does so by a much smaller margin.
+\item Along the same lines as the previous point, the ensemble classifiers which forego a meta-learning stage in favour of a larger base classifier training set generally exhibit a respectable performance both in terms of AUC score and consistency.
+\end{enumerate}
+
+\noindent
+The contrasting nature of the ensemble methods which include a meta-learing stage and those which do not, leads to a difference in the way that data is fed to each. As explained in Section \ref{ensemblingprocess}, for an ensemble classifier which does not require the training of a meta-learning on the Mtrain subset, we opt instead to include Mtrain along with Btrain in the training data for the base classifiers, for two reasons. Firstly, to withold the subset Mtrain completely from these ensemble classifiers would be to impose on them a data deficit in comparison to the meta-learning ensemblers, resulting in an unfair comparison. Secondly, any real-world implementation of these ensemble classifiers would surely aim to make full use of the available data, rather than arbitrarily withholding a 25\% subset, so for the purposes of obtaining results that are applicable to real-world best practise, ours is the more reasonable approach. Figure \ref{fig:03} supports these assertions, demonstrating that a larger base classifier training set almost universally results in significantly greater prediction accuracy.
+
+
+\vspace{-0.5cm}
+\section{Conclusion}
+
+The most immediate conclusion to be drawn from our results is that ensembling for model uncertainty is not generally more effective than simply selecting the best base classifier, which therefore appears to be the most important factor in improving classifier performance. Indeed, the only ensemble methods to outperform the best base classifier were Stack SLR and Stack LR, both of which work broadly by attempting to 'learn' which are the best base classifiers and then weighting the their predictions the most heavily.
+
+How might this be reconciled with the fact that real-world applications consistently show a performance boost from ensembling? We note that many such real-world applications (e.g. Kaggle competition winners and the top performers in the Netflix Prize) include varying degrees of feature learning and ensembling over feature sets, rather than our approach of \textcolor{red}{what is a concise phrase describing our approach of ensembling over base predictions?}. This suggests that the observed success of ensembling in these cases may have more to do with these alternative approaches to ensembling - a hypothesis which we believe merits future investigation.
+
+\vspace{0.2cm}
+\noindent
+Our results suggest also that it is important to consider the 'cost' of some ensemble methods in terms of training data. We see with regards to IBCC that the advantages conferred by meta-learning from labelled training examples in Supervised IBCC appear to be outweighed by the larger volume of training data given to the base classifiers in Unsupervised IBCC. More generally, the relative performance of the meta-learning and non-meta-learning ensemble methods supports the idea that the performance gain from ensembling with a meta-learner may not outweigh the cost of a reduced training set, particularly if the entire dataset is small to begin with, as may often be the case in medical applications. It is therefore clearly important to carefully consider the nature of a dataset, and not just which classifiers to use, when attempting to obtain good predictions.
+
+\vspace{0.2cm}
+\noindent
+Finally, we mention the respectable and consistent performance of the very basic Average and Rank Average ensemble methods, relative to more complex approaches such as stacking, which perform extremely poorly on a small number of the datasets. With regards to medical applications in diagnosis, for example, it is clear to see why one would prefer a consistently good classifier over an occasionally excellent classifier whose consistency varies greatly, even if the latter is sometimes the best performing classifier of all. Furthermore, as the volume of medical data available to doctors increases, it will become increasingly important to consider the computational cost of machine learning methods, in which simpler methods such as Average and Rank Average are clear winners over Stacking and IBCC.
+
+\clearpage
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=270]{basegraph.jpg}
+\caption{Base Classifier Accuracy on a Variety of Datasets}
+\label{fig:01}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=270]{ensemblegraph.jpg}
+\caption{Ensemble Classifier Accuracy on a Variety of Datasets}
+\label{fig:02}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[p]
+\includegraphics[angle=270]{smallvlargegraph.jpg}
+\caption{Non-Meta-Learning Ensemble Accuracy on Small (pale colours) vs Large (dark colours) training sets}
+\label{fig:03}
+\end{figure}
+
+\clearpage
+
+
+\begin{table}
+\centering
+\begin{tabular}
+    {|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+     & bc wisc dia & bc wisc orig & haberman & hungary & ilpd & mammographic & spect & spectF & st-heart & vertebral\\ \hline
+    glmnet & 0.9987 & 1.0000 & 0.5839 & 0.9154 & 0.7678 & 0.8713 & 0.8019 & 0.8263 & 0.9018 & 0.9586\\ \hline
+    rf & 0.9989 & 1.0000 & 0.6599 & 0.8896 & 0.7338 & 0.8427 & 0.8458 & 0.8068 & 0.9246 & 0.9194\\ \hline
+    gbm & 0.9981 & 1.0000 & 0.5851 & 0.8900 & 0.7482 & 0.8726 & 0.8377 & 0.7922 & 0.9009 & 0.9342\\ \hline
+    gp & 0.9989 & 1.0000 & 0.6368 & 0.8929 & 0.6062 & 0.8745 & 0.8149 & 0.7614 & 0.9307 & 0.9253\\ \hline
+    nnet & 0.9971 & 1.0000 & 0.6351 & 0.9041 & 0.7698 & 0.8703 & 0.6169 & 0.7549 & 0.9114 & 0.9268\\ \hline
+    dt & 0.9524 & 0.9708 & 0.5773 & 0.7904 & 0.5000 & 0.8303 & 0.7102 & 0.6518 & 0.7439 & 0.8580\\ \hline
+    rbm & 0.9202 & 0.9512 & 0.5773 & 0.8186 & 0.5000 & 0.8139 & 0.6916 & 0.6364 & 0.7539 & 0.8580\\ \hline
+    knn & 0.9987 & 1.0000 & 0.5178 & 0.8816 & 0.7047 & 0.8779 & 0.8101 & 0.8133 & 0.9289 & 0.9098\\ \hline
+    nb & 0.9958 & 0.9960 & 0.4558 & 0.8966 & 0.7905 & 0.8452 & \footnotemark & 0.8076 & 0.9202 & 0.8262\\ \hline
+    lda & 0.9960 & 1.0000 & 0.5847 & 0.8947 & 0.6970 & 0.8669 & 0.8750 & 0.7451 & 0.9035 & 0.9430\\ \hline
+\end{tabular}
+\caption{AUC scores for base classifiers on each dataset.}
+\label{fig:04}
+\end{table}
+
+
+\footnotetext{see Section \ref{results&discussion}}
+
+\clearpage
+
+\begin{table}[t]
+\csvautotabular{ensembletable.csv}
+\caption{AUC scores for ensemble classifiers \& best base classifier on each dataset.}
+\label{fig:05}
+\end{table}
+
+\clearpage
+
+\begin{table}[t]
+\csvautotabular{smallvlargetable.csv}
+\caption{AUC scores for non-meta-learning ensemble classifiers with small and large base classifier training set on each dataset.}
+\label{fig:06}
+\end{table}
+
+\clearpage
+
+\section*{Acknowledgements}
+
+Edwin Simpson, for providing a complete Python implementation of his IBCC classifier and for useful discussion during the course of our investigation.
+
+\section*{Funding}
+
+This work has been supported by University of Warwick's Undergraduate Research Support Scheme (URSS), and by the Systems Biology Centre at the University of Warwick.
+
+%\bibliographystyle{natbib}
+%\bibliographystyle{achemnat}
+%\bibliographystyle{plainnat}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{bioinformatics}
+%
+%\bibliographystyle{plain}
+%
+%\bibliography{Document}
+
+\begin{thebibliography}{9}
+
+\bibitem[1]{Simpson13}
+Simpson,E., Roberts,S., Psorakis, I., Smith,A. (2013) Dynamic Bayesian Combination of Multiple Imperfect Classifiers, {\it Decision Making and Imperfection, Intelligent Systems Reference Library series, Springer}
+
+\bibitem[2]{UCIrep}
+Lichman,M. (2013) UCI Machine Learning Repository, \url{http://archive.ics.uci.edu/ml}, University of California, Irvine, School of Information and Computer Sciences
+
+\bibitem[3]{stackexchange-neuralnet}
+"sashkello" (2014) Stackoverflow, \url{http://stackoverflow.com/a/21446455}
+
+\bibitem[4]{classifiercomparison}
+Fernandez-Delgado,M., Cernadas,E., Barro,S. (2014) Do we Need Hundreds of Classifiers to Solve Real World Classification Problems, {\it Journal of Machine Learning Research}.
+
+\bibitem[5]{glmnet}
+Friedman,J., Hastie,T., Tibshirani,R. (2010) Regularization Paths for Generalized Linear Models via Coordinate Descent. \textit{Journal of Statistical Software}, \textbf{33}, 1--22 \url{http://www.jstatsoft.org/index.php/jss/article/view/v033i01}
+
+\bibitem[6]{randomforest}
+Liaw,A., Wiener,M. (2002) Classification and Regression by randomForest. \textit{R News}, \textbf{2}(3), 18--22, \url{http://CRAN.R-project.org/doc/Rnews/}
+
+\bibitem[7]{gbm}
+Ridgeway,G., Southworth,H. (2015) GBM package. \url{https://github.com/harrysouthworth/gbm}
+
+\bibitem[8]{kernlab}
+Karatzoglou,A., Smola,A., Hornik,K., Zeileis,A. (2004). kernlab - An S4 Package for Kernel Methods in R. \textit{Journal of Statistical Software} \textbf{11}(9), 1-20. \url{http://www.jstatsoft.org/v11/i09/}
+
+\bibitem[9]{neuralnet}
+Fritsch,S., Guenther,F. (2012) Neuralnet package \url{https://cran.r-project.org/web/packages/neuralnet/index.html}
+
+\bibitem[10]{c50}
+Kuhn,M. Weston,S., Coulter,N., Culp,M. (2015) C50 package \url{https://cran.r-project.org/web/packages/C50/C50.pdf}
+
+\bibitem[11]{caret}
+Kuhn,M. (2015) Caret package \url{https://github.com/topepo/caret/}
+
+\bibitem[12]{klar}
+Weihs,C., Ligges,U., Luebke,K., Raabe,N. (2005). klaR Analyzing German Business Cycles. In Baier, D., Decker, R. and Schmidt-Thieme, L. (eds.). \textit{Data Analysis and Decision Support}, 335-343. \url{http://www.statistik.tu-dortmund.de}
+
+\bibitem[13]{mass}
+Venables,W. N., Ripley,B. D. (2002) Modern Applied Statistics with S. Fourth Edition. Springer, New York. ISBN 0-387-95457-0. \url{http://www.stats.ox.ac.uk/pub/MASS4/}
+
+\bibitem[14]{netflixprize}
+\url{www.netflixprize.com},. 'Netflix Prize: Home'. Accessed 29 Sept. 2015.
+
+\bibitem[15]{kagglecompetitions}
+\url{https://www.kaggle.com/competitions},. 'Competitions | Kaggle'. Accessed 29 Sept. 2015.
+
+\bibitem[15]{kaggleguide}
+"Triskelion" (2015) Kaggle Ensembling Guide. \url{http://mlwave.com/kaggle-ensembling-guide/}
+
+
+\end{thebibliography}
+\end{document}

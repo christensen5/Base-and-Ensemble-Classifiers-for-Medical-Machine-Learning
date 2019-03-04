@@ -1,0 +1,736 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.22)  1 OCT 2015 14:33
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex -recorder
+(./main.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
+(./bioinfo.cls
+Document Class: bioinfo 2003/02/08 0.1
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+) (./crop.sty
+Package: crop 2001/11/16 v1.6 cropmarks (mf)
+\CROP@width=\dimen102
+\CROP@height=\dimen103
+\CROP@index=\count79
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count80
+))
+\CROP@offset=\count81
+Package crop Info: Local config file crop.cfg used on input line 344.
+
+(./crop.cfg))
+Package crop Info: using pdf(la)tex graphics driver on input line 31.
+ (./graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen106
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count82
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count83
+\leftroot@=\count84
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count85
+\DOTSCASE@=\count86
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count87
+\c@MaxMatrixCols=\count88
+\dotsspace@=\muskip10
+\c@parentequation=\count89
+\dspbrk@lvl=\count90
+\tag@help=\toks18
+\row@=\count91
+\column@=\count92
+\maxfields@=\count93
+\andhelp@=\toks19
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks20
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (./array.sty
+Package: array 1998/05/13 v2.3m Tabular extension package (FMi)
+\col@sep=\dimen115
+\extrarowheight=\dimen116
+\NC@list=\toks22
+\extratabsurround=\skip44
+\backup@length=\skip45
+) (./color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(./flushend.sty
+Package: flushend 1997/10/01
+\@aaa=\box28
+\@ccc=\box29
+\@viper=\box30
+\hold@viper=\box31
+\atColsBreak=\toks23
+\@extra@skip=\dimen117
+\@nd@page@rule=\dimen118
+) (./stfloats.sty
+Package: stfloats 1999/10/22
+\@dblbotnum=\count94
+\c@dblbotnumber=\count95
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks29
+)
+(./chngpage.sty
+Package: chngpage 2001/01/31 v1.1b change page layout
+\c@cp@cnt=\count96
+\c@cp@tempcnt=\count97
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ly1/ly1enc.def
+File: ly1enc.def 2009/07/22 v0.7 TeX 'n ANSI encoding (DPC/KB)
+)
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 105.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ly1/ly1ptm.fd
+File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
+))
+\c@section=\count98
+\c@subsection=\count99
+\c@subsubsection=\count100
+\c@paragraph=\count101
+\c@subparagraph=\count102
+\c@figure=\count103
+\c@table=\count104
+\dropfromtop=\skip49
+\extraspace=\skip50
+\aboveskipchk=\skip51
+\abovecaptionskip=\skip52
+\belowcaptionskip=\skip53
+\rotdimen=\dimen119
+\tempdime=\dimen120
+\temptbox=\box32
+ (./natbib.sty
+Package: natbib 2000/07/24 7.0a (PWD)
+\bibhang=\skip54
+\bibsep=\skip55
+LaTeX Info: Redefining \cite on input line 508.
+\c@NAT@ctr=\count105
+))
+(./url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count106
+\rotFPtop=\skip56
+\rotFPbot=\skip57
+\rot@float@box=\box33
+\rot@mess@toks=\toks30
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen121
+\scratchbox=\box34
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen122
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for LY1+phv on input line 46.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ly1/ly1phv.fd
+File: ly1phv.fd 2001/02/01 scalable font definitions for LY1/phv using Berry na
+mes.
+)
+Package epstopdf Info: Source file: <OUP_First_SBk_Bot_8401.eps>
+(epstopdf)                    date: 2015-08-12 16:24:54
+(epstopdf)                    size: 407286 bytes
+(epstopdf)             Output file: <OUP_First_SBk_Bot_8401-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-09-16 15:08:36
+(epstopdf)                    size: 9269 bytes
+(epstopdf)             Command: <repstopdf --outfile=OUP_First_SBk_Bot_8401-eps
+-converted-to.pdf OUP_First_SBk_Bot_8401.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+
+<OUP_First_SBk_Bot_8401-eps-converted-to.pdf, id=1, 54.2025pt x 54.2025pt>
+File: OUP_First_SBk_Bot_8401-eps-converted-to.pdf Graphic file (type pdf)
+
+<use OUP_First_SBk_Bot_8401-eps-converted-to.pdf>
+Package pdftex.def Info: OUP_First_SBk_Bot_8401-eps-converted-to.pdf used on in
+put line 46.
+(pdftex.def)             Requested size: 54.20236pt x 54.20236pt.
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <8> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <18> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <12> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 46.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <9> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <7> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 46.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
+(Font)              size <6> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 46.
+
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 46.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.25> not available
+(Font)              size <5> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
+(Font)              size <8> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available
+(Font)              size <5> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 46.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available
+(Font)              size <5> substituted on input line 46.
+
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <10> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 46.
+LaTeX Font Info:    Try loading font information for LY1+pcr on input line 46.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ly1/ly1pcr.fd
+File: ly1pcr.fd 2001/02/01 font definitions for LY1/pcr using Berry names.
+)
+LaTeX Font Info:    Font shape `LY1/phv/m/it' in size <9> not available
+(Font)              Font shape `LY1/phv/m/sl' tried instead on input line 46.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+
+ []
+
+
+Underfull \hbox (badness 3302) in paragraph at lines 46--46
+\LY1/phv/b/n/9 Availability: \LY1/phv/m/n/9 R implementations of our own base a
+nd ensemble classifiers are available at
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 46
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (1.12001pt too wide) has occurred while \output is active
+ []
+ []
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+ <./OUP_First_SBk_Bot_8401-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 80.
+
+Underfull \hbox (badness 1248) in paragraph at lines 80--81
+[]\LY1/ptm/b/n/8 Breast Cancer Wisconsin (Original) \LY1/ptm/m/n/8 (1991): clas
+sification of
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 82--83
+\LY1/ptm/m/n/8 Billings Hospital & Tjen-Sien Lim, Department of Statistics,
+ []
+
+
+Overfull \hbox (8.63722pt too wide) in paragraph at lines 85--86
+[]\LY1/ptm/b/n/8 Mammographic Mass Dataset \LY1/ptm/m/n/8 (2007): classificatio
+n of mammographic
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 89--90
+\LY1/ptm/m/n/8 patients into 'normal' or 'abnormal'. Courtesy of Guilherme
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 89--90
+\LY1/ptm/m/n/8 de Alencar Barreto & Ajalmar da Rocha Neto, Department
+ []
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 89--90
+\LY1/ptm/m/n/8 of Teleinformatics Engineering, Federal University of Ceará,
+ []
+
+LaTeX Font Info:    Try loading font information for LY1+phb on input line 94.
+LaTeX Font Info:    No file LY1phb.fd. on input line 94.
+
+LaTeX Font Warning: Font shape `LY1/phb/m/n' undefined
+(Font)              using `LY1/ptm/m/n' instead on input line 94.
+
+
+LaTeX Font Warning: Font shape `LY1/phb/bx/n' undefined
+(Font)              using `LY1/phb/m/n' instead on input line 94.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `LY1/phv/m/it' in size <8> not available
+(Font)              Font shape `LY1/phv/m/sl' tried instead on input line 112.
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[2]
+Underfull \hbox (badness 1215) in paragraph at lines 129--130
+\LY1/ptm/m/it/8 glmnet \LY1/ptm/m/n/8 package. We run with the flags \LY1/ptm/m
+/it/8 maxit=1e5, alpha=1,
+ []
+
+
+Underfull \hbox (badness 7168) in paragraph at lines 131--132
+[]\LY1/ptm/b/n/8 Generalised Boosting Model\LY1/ptm/m/n/8 , with the function g
+bm in
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 131--132
+\LY1/ptm/m/n/8 the \LY1/ptm/m/it/8 gbm \LY1/ptm/m/n/8 package. Flags \LY1/ptm/m
+/it/8 distribution="bernoulli", ntrees=3000,
+ []
+
+
+Underfull \hbox (badness 4048) in paragraph at lines 133--134
+[]\LY1/ptm/b/n/8 Support Vector Machine\LY1/ptm/m/n/8 , with the function ksvm 
+in the
+ []
+
+
+Underfull \hbox (badness 5862) in paragraph at lines 133--134
+\LY1/ptm/m/it/8 kernlab \LY1/ptm/m/n/8 package. Flags \LY1/ptm/m/it/8 kernel="r
+bfdot", prob.model=TRUE,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 173--174
+[]\LY1/ptm/b/n/8 Rank Average\LY1/ptm/m/n/8 , ranks the predictions for each ba
+se classifier
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[4] <basegraph.jpg, id=37, 730.73pt x 446.66875pt>
+File: basegraph.jpg Graphic file (type jpg)
+ <use basegraph.jpg>
+Package pdftex.def Info: basegraph.jpg used on input line 236.
+(pdftex.def)             Requested size: 730.72821pt x 446.66765pt.
+
+Overfull \hbox (212.66765pt too wide) in paragraph at lines 236--237
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <6.5> not available
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 237.
+
+LaTeX Warning: Float too large for page by 69.8057pt on input line 239.
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[5
+
+
+ <./basegraph.jpg>] <ensemblegraph.jpg, id=41, 730.73pt x 446.66875pt>
+File: ensemblegraph.jpg Graphic file (type jpg)
+
+<use ensemblegraph.jpg>
+Package pdftex.def Info: ensemblegraph.jpg used on input line 245.
+(pdftex.def)             Requested size: 730.72821pt x 446.66765pt.
+
+Overfull \hbox (212.66765pt too wide) in paragraph at lines 245--246
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 69.8057pt on input line 248.
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[6
+
+
+ <./ensemblegraph.jpg>]
+<smallvlargegraph.jpg, id=45, 730.73pt x 446.66875pt>
+File: smallvlargegraph.jpg Graphic file (type jpg)
+
+<use smallvlargegraph.jpg>
+Package pdftex.def Info: smallvlargegraph.jpg used on input line 253.
+(pdftex.def)             Requested size: 730.72821pt x 446.66765pt.
+
+Overfull \hbox (212.66765pt too wide) in paragraph at lines 253--254
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 79.3057pt on input line 256.
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[7
+
+
+ <./smallvlargegraph.jpg>]
+Overfull \hbox (235.47046pt too wide) in paragraph at lines 263--277
+ [][] 
+ []
+
+
+Overfull \hbox (234.13155pt too wide) in paragraph at lines 282--337
+[][] 
+ []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[8
+
+
+]
+Overfull \hbox (235.47046pt too wide) in paragraph at lines 344--388
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[9
+
+
+]
+Underfull \hbox (badness 6157) in paragraph at lines 396--397
+\LY1/ptm/m/n/8 We thank Edwin Simpson, for providing a complete Python
+ []
+
+
+Underfull \hbox (badness 5022) in paragraph at lines 415--416
+\LY1/ptm/m/n/7 Combination of Multiple Imperfect Classifiers, \LY1/ptm/m/it/7 D
+ecision Making and
+ []
+
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 424.
+
+Underfull \hbox (badness 2443) in paragraph at lines 424--425
+\LY1/ptm/m/n/7 Linear Models via Coordinate Descent. \LY1/ptm/m/it/7 Journal of
+ Statistical Software\LY1/ptm/m/n/7 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]\LY1/ptm/m/n/7 Fritsch,S., Guenther,F. (2012) Neuralnet package $\LY1/pcr/m/n
+/7 https : / / cran .
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 457--458
+[]\LY1/ptm/m/n/7 "Triskelion" (2015) Kaggle Ensembling Guide. $\LY1/pcr/m/n/7 h
+ttp : / / mlwave . com /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:30.09898pt when 250.54948pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:30.09898pt when 251.54948pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:30.09898pt when 252.54948pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 253.54948pt
+Extra height:10.0pt when 254.54948pt
+Extra height:10.0pt when 255.54948pt
+Extra height:0.0pt when 256.54948pt
+(2)Left:256.54948pt Right:246.09898pt Output:256.54948pt
+- LAST -
+Extra skip:0.0pt
+Left:256.54948pt
+Right:246.09898pt
+Output:256.54948pt
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[10
+
+
+] (./main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.75pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3873 strings out of 493091
+ 48308 string characters out of 6134964
+ 160325 words of memory out of 5000000
+ 7249 multiletter control sequences out of 15000+600000
+ 57707 words of font info for 100 fonts, out of 8000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 38i,10n,28p,1161b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/urw/helvetic/uhvr8ac.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+urw/helvetic/uhvro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/he
+lvetic/uhvro8ac.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 456710 bytes).
+PDF statistics:
+ 114 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
